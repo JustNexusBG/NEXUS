@@ -7,9 +7,7 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-  
-
-body {
+  body {
     background: #000000;
     color: #ffffff;
 }
@@ -62,13 +60,16 @@ body {
 }
 
 .home-content {
-    max-width: 700px;
+    max-width: 800px;
 }
 
 .home-content h1 {
     font-size: 56px;
     font-weight: 700;
     line-height: 1.2;
+    background: linear-gradient(to right, #ffffff, #464646); /* Цветовете на градиента */
+    -webkit-background-clip: text;
+    color: transparent;
 }
 
 .home-content h3 {
@@ -96,7 +97,7 @@ body {
     align-items: center;
     width: 150px;
     height: 100%;
-    background-color: #acacac;
+    background-color: #7e7e7e;
     border: 2px solid #ffffffef;
     border-radius: 8px;
     font-size: 19px;
@@ -123,7 +124,7 @@ body {
 }
 
 .btn-box a:nth-child(2)::before {
-    background: #acacac;
+    background: #7e7e7e;
 }
 
 .btn-box a::before {
@@ -224,7 +225,7 @@ body {
 }
 
 p {
-    color: #00abf0;
+    color: #ffffff;
 }
 
 /* Custom Scrollbar */
@@ -251,4 +252,214 @@ footer {
     color: #fff;
     text-align: center;
     padding: 1rem 0;
+}
+
+.parallax-container {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.parallax-background {
+    background-image: url('POPOFF.jpg'); /* Пътят до вашата снимка */
+    height: 120%;
+    width: 100%;
+    position: absolute;
+    top: -10%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    z-index: -1;
+}
+
+.parallax-background::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4); /* Черен цвят с 50% прозрачност */
+    z-index: -1;
+}
+
+.parallax {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+    position: relative; /* Добавено, за да се показва над .parallax-background */
+    z-index: 1; /* Добавено, за да се показва над .parallax-background */
+}
+
+.parallax-content {
+    max-width: 700px;
+}
+
+.parallax-content h1 {
+    font-size: 100px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.parallax-content h3 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #e100ffef;
+}
+
+.parallax-content p {
+    font-size: 16px;
+    margin: 20px 0 20px;
+}
+
+.parallax-content .btn-box {
+    display: flex;
+    justify-content: space-between;
+    width: 345px;
+    height: 50px;
+}
+
+/* Вашите съществуващи стилове */
+.parallax {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+}
+
+.parallax-content {
+    max-width: 900px;
+}
+
+.parallax-content h1 {
+    font-size: 90px;
+    font-weight: 900;
+    line-height: 1.2;
+    background: linear-gradient(to right, #ffffff, #888888);
+    -webkit-background-clip: text;
+    color: transparent;
+    margin-top: 1px; /* Променете стойността на margin-top според вашите предпочитания */
+}
+
+.parallax-content h3 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #e100ffef;
+}
+
+.parallax-content p {
+    font-size: 16px;
+    margin: 20px 0 20px;
+}
+
+.parallax-content .btn-box {
+    display: flex;
+    justify-content: space-between;
+    width: 345px;
+    height: 50px;
+}
+
+/* Общи стилове за всички секции */
+.section {
+    padding: 50px;
+    border-bottom: 1px solid #333;
+    min-height: 100vh; /* Височина на секцията */
+}
+
+/* Стилове за третата секция */
+.third-section {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding-bottom: 200px; /* Малко разстояние от долната част */
+}
+
+/* Стилове за контейнера */
+.container {
+    background-color: #1b1b1b;
+    padding: 30px;
+    border-radius: 20px;
+    width: 600px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.container h3 {
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+
+.container input[type="text"],
+.container input[type="email"],
+.container textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 30px;
+    background-color: #2c2c2c;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 16px;
+}
+
+.container textarea {
+    height: 150px;
+    resize: none;
+}
+
+.container input[type="text"]::placeholder,
+.container input[type="email"]::placeholder,
+.container textarea::placeholder {
+    color: #646464;
+}
+
+.container button {
+    width: 100%;
+    padding: 15px;
+    background-color: #8000ff;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.container button:hover {
+    background-color: #a64cff;
+}
+
+.left {
+    flex: 1;
+    margin-right: 20px;
+    top: 50px;
+    font-size: 60px;
+    font-weight: 900;
+    line-height: 1.2;
+    padding-bottom: 100px; /* Малко разстояние от долната част */
+    background: linear-gradient(to right, #ffffff, #888888);
+    -webkit-background-clip: text;
+    color: transparent;
+    margin-top: 1px; /* Променете стойността на margin-top според вашите предпочитания */
+
+}
+
+ul {
+    padding: 0;
+    margin: 15px 0 0 0; /* Добавяне на отстъп между заглавието и списъка */
+}
+
+ul li {
+    font-size: 1.2em; /* Регулиране на размера на шрифта според нуждите */
+    margin-bottom: 10px; /* Регулиране на марджините между елементите на списъка */
+    padding-left: 20px; /* Добавяне на ляв отстъп, за да побере символите на списъка */
+    position: relative;
+}
+
+ul li::before {
+    position: absolute;
+    left: 0;
+    top: 0;
 }
